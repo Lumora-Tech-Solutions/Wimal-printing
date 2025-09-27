@@ -84,11 +84,36 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                {/* Decorative circles — theme glows */}
-                <div className="pointer-events-none absolute -top-10 -left-12 h-20 w-20 rounded-full bg-secondary/50 blur-l" />
-                <div className="pointer-events-none absolute -bottom-12 -right-10 h-24 w-24 rounded-full bg-secondary/50 blur-l" />
-                <div className="pointer-events-none absolute top-1/2 -translate-y-1/2 -left-6 h-10 w-10 rounded-full bg-secondary/60 blur-l" />
-                <div className="pointer-events-none absolute bottom-8 left-1/2 -translate-x-1/2 h-16 w-16 rounded-full bg-primary/60 blur-l" />
+           {/* Decorative circles — theme glows */}
+<div className="pointer-events-none absolute -top-10 -left-12 h-20 w-20 rounded-full blur-l" style={{ backgroundColor:'rgb(88,83,139)' }} />
+<div className="pointer-events-none absolute -bottom-12 -right-10 h-24 w-24 rounded-full blur-90" style={{ backgroundColor:'rgb(88,83,139)' }} />
+<div className="pointer-events-none absolute top-1/2 -translate-y-1/2 -left-6 h-10 w-10 rounded-full blur-l" style={{ backgroundColor: 'rgb(88,83,139)' }} />
+<div className="pointer-events-none absolute bottom-8 left-1/2 -translate-x-1/2 h-16 w-16 rounded-full blur-l" style={{ backgroundColor:'rgb(88,83,139)'  }} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT US — gradient box with button that opens popup */}
+      <section className="section">
+        <div className="container">
+          <div className="rounded-3xl bg-gradient-to-br from-blue-900/10 to-blue-950/60 px-6 md:px-12 py-10 md:py-12 shadow-2xl text-secondary">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+              <div className="max-w-3xl">
+                <h2 className="text-2xl md:text-3xl font-semibold text-secondary">About Us</h2>
+                <p className="mt-3 text-secondary/90">
+                  Learn more about our experience and why brands in Qatar trust us for precision, durability, and creative print solutions.
+                </p>
+              </div>
+              <div className="shrink-0">
+                {/* Use a plain anchor for reliable same-page hash navigation */}
+                <a
+                  href="#about"
+                  className="inline-flex items-center justify-center rounded-xl bg-primary text-white font-semibold px-5 py-2.5 shadow hover:shadow-md transition"
+                >
+                  Read More
+                </a>
               </div>
             </div>
           </div>
@@ -158,6 +183,33 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      {/* ABOUT US POPUP (opens when URL hash == #about) */}
+      <div id="about" className="fixed inset-0 z-50 hidden">
+        {/* overlay closes the modal when clicked */}
+        <a href="#" className="absolute inset-0 bg-black/50" aria-label="Close About Us" />
+        <div className="relative mx-auto my-16 w-[min(92vw,720px)] rounded-2xl bg-white p-6 md:p-8 shadow-2xl">
+          <div className="flex items-start justify-between gap-6">
+            <h2 className="text-2xl md:text-3xl font-semibold text-secondary">About Us</h2>
+            <a
+              href="#"
+              className="rounded-lg px-3 py-1.5 text-sm font-medium text-secondary/70 ring-1 ring-secondary/20 hover:bg-secondary/5"
+              aria-label="Close"
+            >
+              Close
+            </a>
+          </div>
+
+          <div className="mt-4 text-secondary/90 leading-relaxed space-y-4">
+            <p>
+              At Wimal Gift, we are proud to be among Qatar’s most trusted names in silk screen printing. With long years
+              of experience and a team of skilled professionals, we specialize in delivering high-quality screen printing
+              solutions for businesses, events, and personal projects. Our commitment to precision, durability, and
+              creativity has made us a reliable choice for clients across Qatar
+            </p>
+          </div>
+        </div>
+      </div>
     </>
   )
 }

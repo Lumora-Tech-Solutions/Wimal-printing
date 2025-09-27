@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+#about:target { display: block; }
 /* Basic radius var (not strictly required, kept from starter) */
 :root { --radius: 1.25rem; }
 

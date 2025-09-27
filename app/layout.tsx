@@ -3,10 +3,16 @@ import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import type { ReactNode } from 'react'
+import type { Metadata } from 'next'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Wimal Gift trading & Design. — Quality Prints, Creative Solutions.',
   description: 'Quality Prints, Creative Solutions',
+  icons: {
+    icon: '/favicon.png',       // favicon in public/
+    shortcut: '/favicon.png',   // fallback shortcut
+    apple: '/favicon.png',      // iOS/Apple devices
+  },
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
