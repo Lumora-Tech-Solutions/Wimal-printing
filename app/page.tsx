@@ -32,16 +32,17 @@ export default function HomePage() {
                 <p className="mt-6 text-white text-lg max-w-xxl">
                   From digital and offset to sublimation and UV, we bring your brand to life.
                 </p>
-                <div className="mt-8 flex gap-4">
+                {/* Mobile-friendly button stack */}
+                <div className="mt-8 flex flex-col sm:flex-row gap-4">
                   <Link
                     href="/contact"
-                    className="inline-flex items-center justify-center rounded-xl bg-primary text-white font-semibold px-5 py-2.5 shadow hover:shadow-md transition"
+                    className="w-full sm:w-auto inline-flex items-center justify-center rounded-xl bg-primary text-white font-semibold px-5 py-2.5 shadow hover:shadow-md transition"
                   >
                     Get a Quote
                   </Link>
                   <Link
                     href="/services"
-                    className="inline-flex items-center justify-center rounded-xl ring-1 ring-secondary/60 text-white font-semibold px-5 py-2.5 hover:bg-white/10 transition"
+                    className="w-full sm:w-auto inline-flex items-center justify-center rounded-xl ring-1 ring-secondary/60 text-white font-semibold px-5 py-2.5 hover:bg-white/10 transition"
                   >
                     Explore Services
                   </Link>
@@ -84,11 +85,23 @@ export default function HomePage() {
                   </div>
                 </div>
 
-           {/* Decorative circles — theme glows */}
-<div className="pointer-events-none absolute -top-10 -left-12 h-20 w-20 rounded-full blur-l" style={{ backgroundColor:'rgb(88,83,139)' }} />
-<div className="pointer-events-none absolute -bottom-12 -right-10 h-24 w-24 rounded-full blur-90" style={{ backgroundColor:'rgb(88,83,139)' }} />
-<div className="pointer-events-none absolute top-1/2 -translate-y-1/2 -left-6 h-10 w-10 rounded-full blur-l" style={{ backgroundColor: 'rgb(88,83,139)' }} />
-<div className="pointer-events-none absolute bottom-8 left-1/2 -translate-x-1/2 h-16 w-16 rounded-full blur-l" style={{ backgroundColor:'rgb(88,83,139)'  }} />
+                {/* Decorative circles — theme glows (hidden on very small screens) */}
+                <div
+                  className="pointer-events-none absolute -top-10 -left-12 h-20 w-20 rounded-full blur-l hidden sm:block"
+                  style={{ backgroundColor: 'rgb(88,83,139)' }}
+                />
+                <div
+                  className="pointer-events-none absolute -bottom-12 -right-10 h-24 w-24 rounded-full blur-xl hidden sm:block"
+                  style={{ backgroundColor: 'rgb(88,83,139)' }}
+                />
+                <div
+                  className="pointer-events-none absolute top-1/2 -translate-y-1/2 -left-6 h-10 w-10 rounded-full blur-l hidden sm:block"
+                  style={{ backgroundColor: 'rgb(88,83,139)' }}
+                />
+                <div
+                  className="pointer-events-none absolute bottom-8 left-1/2 -translate-x-1/2 h-16 w-16 rounded-full blur-l hidden sm:block"
+                  style={{ backgroundColor: 'rgb(88,83,139)' }}
+                />
               </div>
             </div>
           </div>
@@ -110,7 +123,7 @@ export default function HomePage() {
                 {/* Use a plain anchor for reliable same-page hash navigation */}
                 <a
                   href="#about"
-                  className="inline-flex items-center justify-center rounded-xl bg-primary text-white font-semibold px-5 py-2.5 shadow hover:shadow-md transition"
+                  className="inline-flex items-center justify-center rounded-xl bg-primary text-white font-semibold px-5 py-2.5 shadow hover:shadow-md transition w-full sm:w-auto"
                 >
                   Read More
                 </a>
@@ -124,7 +137,7 @@ export default function HomePage() {
       <section className="section">
         <div className="container">
           <h2 className="text-2xl font-semibold text-secondary">Featured Services</h2>
-          <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {featured.map((s) => (
               <Link
                 key={s.slug}
