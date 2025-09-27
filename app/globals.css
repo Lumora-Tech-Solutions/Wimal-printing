@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Basic radius var (not strictly required, kept from starter) */
+:root { --radius: 1.25rem; }
+
+/* Buttons / inputs */
+.btn-primary { @apply bg-primary text-white rounded-brand px-6 py-3 hover:opacity-90 transition; }
+.btn-outline { @apply ring-1 ring-secondary text-secondary rounded-brand px-6 py-3 hover:bg-secondary/5 transition; }
+.input { @apply w-full rounded-xl border border-gray-200 focus:ring-2 focus:ring-secondary px-4 py-3 outline-none; }
+
+/* Sections / container helpers (if you had them) */
+.section { @apply py-10 md:py-16; }
+.container { @apply mx-auto max-w-6xl px-4; }

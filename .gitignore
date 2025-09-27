@@ -1,0 +1,11 @@
+node_modules
+node_modules
+.next
+dist
+.out
+.vercel
+.env
+.env.*.local
+.vscode/
+Thumbs.db
+.DS_Store
