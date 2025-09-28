@@ -4,8 +4,8 @@ import { services } from '@/content/services'
 import { serviceCover } from '@/lib/gallery'
 import { gifts } from '@/content/gifts'
 
-export const dynamic = 'force-dynamic'
-export const revalidate = 0
+export const revalidate = 3600 // re-generate every hour (optional)
+
 
 export default function HomePage() {
   // Pick first 6 to feature (or reorder in services.ts)
@@ -91,7 +91,7 @@ export default function HomePage() {
                   style={{ backgroundColor: 'rgb(88,83,139)' }}
                 />
                 <div
-                  className="pointer-events-none absolute -bottom-12 -right-10 h-24 w-24 rounded-full blur-xl hidden sm:block"
+                  className="pointer-events-none absolute -bottom-12 -right-10 h-24 w-24 rounded-full blur-l hidden sm:block"
                   style={{ backgroundColor: 'rgb(88,83,139)' }}
                 />
                 <div

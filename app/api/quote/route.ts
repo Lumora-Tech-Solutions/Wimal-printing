@@ -5,7 +5,7 @@ export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
 const resend   = new Resend(process.env.RESEND_API_KEY)
-const MAIL_TO  = process.env.MAIL_TO  || 'mlwimal64@gmail.com'
+const MAIL_TO  = process.env.MAIL_TO  || 'wimalgift@gmail.com'
 const MAIL_FROM= process.env.MAIL_FROM|| 'Wimal Printing <onboarding@resend.dev>'
 
 export async function POST(req: Request) {

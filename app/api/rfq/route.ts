@@ -4,7 +4,7 @@ import { Resend } from 'resend'
 export const runtime = 'nodejs' // ensure Node runtime for Resend
 
 const resend = new Resend(process.env.RESEND_API_KEY)
-const MAIL_TO = process.env.MAIL_TO || 'nimteenu@gmail.com' // change later
+const MAIL_TO = process.env.MAIL_TO || 'wimalgift@gmail.com' // change later
 const MAIL_FROM = process.env.MAIL_FROM || 'Wimal Printing <onboarding@resend.dev>'
 
 export async function POST(req: Request) {

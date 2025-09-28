@@ -6,9 +6,9 @@ export type Service = {
 }
 
 export const services: Service[] = [
+  { slug: 'silk-screen-printing',  title: 'Silk Screen Printing',  summary: 'Uniforms, balloons, lanyards & more.' },
   { slug: 'uv-printing',           title: 'UV Printing',           summary: 'Direct print on wood, acrylic, leather & more.' },
   { slug: 'hot-foiling-embossing', title: 'Hot Foiling / Emboss',  summary: 'Foil & raised effects on paper/leather.' },
-  { slug: 'silk-screen-printing',  title: 'Silk Screen Printing',  summary: 'Uniforms, balloons, lanyards & more.' },
   { slug: 'digital-printing',      title: 'Digital Printing',      summary: 'Fast, vibrant prints for flyers, posters & more.' },
   { slug: 'flex-banners',          title: 'Flex Banners',          summary: 'High-impact outdoor banners in any size.' },
   { slug: 'stickers',              title: 'Stickers',              summary: 'Labels & decals in custom sizes and finishes.' },
