@@ -22,3 +22,4 @@ Place images under:
 - `/public/images/portfolio/*`
 
 Use the provided manifest CSV to map your 248 images.
+"# ping" 
