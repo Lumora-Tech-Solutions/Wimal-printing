@@ -35,9 +35,9 @@ export default function Navbar() {
           <Image
             src="/brand/master-logo.svg"
             alt="Wimal Printing Logo"
-            width={140}
-            height={32}
-            className="h-8 w-auto md:h-10"
+            width={240}
+            height={60}
+            className="h-60 w-90 md:h-60"
             priority
           />
         </Link>
